@@ -13,8 +13,20 @@ string position = Console.ReadLine() ?? string.Empty;
 Console.Write("Link da vaga: ");
 string jobUrl = Console.ReadLine() ?? string.Empty;
 
-Console.Write("Salário: ");
-decimal salary = decimal.Parse(Console.ReadLine() ?? "0");
+decimal salary;
+//validação do salário
+while (true)
+{
+    Console.Write("Salário: ");
+    string salaryInput = Console.ReadLine() ?? string.Empty;
+
+    if (decimal.TryParse(salaryInput, out salary))
+    {
+        break;
+    }
+
+    Console.WriteLine("Valor inválido. Digite o salário novamente.");
+}
 
 Console.WriteLine();
 Console.WriteLine("Modalidade:");

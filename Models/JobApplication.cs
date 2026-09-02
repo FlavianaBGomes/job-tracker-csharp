@@ -10,11 +10,11 @@ public class JobApplication
     public string Position { get; set; } = string.Empty;
     public string JobUrl { get; set; } = string.Empty;
 
-    public decimal Salary { get; set; }
+    public decimal Salary { get; set; } //decimal é mais indicado para salário
 
     public WorkMode WorkMode { get; set; }
 
-    public DateTime ApplicationDate { get; set; }
+    public DateTime ApplicationDate { get; set; } //a data que a candidatura foi feita
 
     public ApplicationStatus Status { get; set; }
 
